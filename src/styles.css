@@ -14,7 +14,7 @@
 
 :root {
     font-family: 'Roboto', sans-serif;
-    font-size: 30px;
+    font-size: 26px;
     --blue: #0891B2;
     --gray: #565656;
 
@@ -60,16 +60,14 @@ p {
     transform-origin: left bottom;
 }
 
-.img-wrap > img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
 .shadow {
     -webkit-box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);
     -moz-box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);
     box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);
+}
+
+img{
+    display: block;
 }
 
 header {
@@ -79,9 +77,7 @@ header {
 }
 
 header .img-wrap {
-    width: 600px;
-    height: 700px;
-    float: left;
+    max-width: 600px;
 }
 
 .about-me {
@@ -94,20 +90,28 @@ header .img-wrap {
     margin-top: 0;
 }
 
-@media (min-width: 500px) and (max-width: 1000px) {
+@media (min-width: 500px) and (max-width: 1280px) {
     header {
         display: block;
     }
 
     header .img-wrap {
         margin-right: 2rem;
+        float: left;
     }
 
     .about-me {
         max-width: calc(600px + 2rem + 55ch);
     }
+
+    .behind{
+        background-color: red;
+    }
 }
 
 @media (max-width: 500px) {
+    .behind{
+        background-color: green;
+    }
 
 }
