@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('assets/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('assets/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    --blue: #0891B2;
+    --gray: #565656;
+
+}
+
+body {
+    margin: 0;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    padding: 1px;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', sans-serif;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin: 1rem 0;
+}
+
+p {
+    margin: 0;
+    line-height: 1.5;
+    color: var(--gray);
+}
+
+.behind {
+    z-index: -1;
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--blue);
+    transform: skewY(-10deg);
+    transform-origin: left bottom;
+}
+
+.img-wrap > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.shadow {
+    -webkit-box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 22px 0px rgba(66, 68, 90, 1);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .img-wrap {
+    width: 600px;
+    height: 700px;
+    float: left;
+}
+
+.about-me {
+    max-width: 55ch;
+    background-color: white;
+    padding: 2rem 2rem;
+}
+
+.about-me > h2 {
+    margin-top: 0;
+}
+
+@media (min-width: 500px) and (max-width: 1000px) {
+    header {
+        display: block;
+    }
+
+    header .img-wrap {
+        margin-right: 2rem;
+    }
+
+    .about-me {
+        max-width: calc(600px + 2rem + 55ch);
+    }
+}
+
+@media (max-width: 500px) {
+
+}
