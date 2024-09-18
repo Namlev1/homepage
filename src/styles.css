@@ -17,11 +17,13 @@
     font-size: 26px;
     --blue: #0891B2;
     --gray: #565656;
-
 }
 
-body {
+body{
     margin: 0;
+}
+
+.body {
     padding: 4rem;
     display: flex;
     flex-direction: column;
@@ -141,9 +143,67 @@ header .img-wrap > h1 {
     padding: .5rem 1rem;
 }
 
-.description img{
-    width: 35px;
+/* icons */
+.icon svg,
+footer svg{
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    fill: currentColor;
+}
+
+.icon svg{
+    width: 1.3em;
+    height: 1.3em;
+    fill: black;
+}
+
+.socials .icon svg{
+    width: 46px;
     height: auto;
+    fill: black;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    color: white;
+    max-width: 1200px;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+    padding: 2rem;
+}
+
+footer .img-wrap{
+    height: 450px;
+}
+
+footer .img-wrap > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+footer p{
+    margin: 1rem 0;
+    color: inherit;
+}
+
+.contact{
+    min-width: 350px;
+}
+
+.socials{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 @media (min-width: 700px) and (max-width: 1280px) {
@@ -151,9 +211,9 @@ header .img-wrap > h1 {
         font-size: 20px;
     }
 
-    body {
+    .body {
         padding: 2rem;
-        gap: 12rem;
+        gap: 0;
     }
 
     img {
@@ -162,6 +222,7 @@ header .img-wrap > h1 {
 
     header {
         display: block;
+        min-height: 750px;
     }
 
     header .img-wrap {
@@ -197,8 +258,8 @@ header .img-wrap > h1 {
         font-size: clamp(10px, 5vw, 20px);
     }
 
-    body {
-        padding: 0 16px;
+    .body {
+        padding: 0 16px 2rem;
     }
 
     h1 {
@@ -206,6 +267,10 @@ header .img-wrap > h1 {
     }
 
     header {
+        flex-direction: column;
+    }
+
+    .footer-content{
         flex-direction: column;
     }
 

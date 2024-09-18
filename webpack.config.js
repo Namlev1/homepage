@@ -23,8 +23,16 @@ module.exports = {
         type: 'asset/resource'
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
+        test: /\.(png|jpg|jpeg|gif|webp)$/i,
         type: 'asset/resource'
+      },
+      {
+        test: /\.svg$/, // Handle SVG files differently
+        use: [
+          {
+            loader: 'svg-inline-loader', // Inline SVGs directly
+          }
+        ]
       }
     ]
   },
