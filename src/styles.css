@@ -247,10 +247,6 @@ footer p{
     .about-me h2 {
         margin-top: 1rem;
     }
-
-    .behind {
-        background-color: red;
-    }
 }
 
 @media (max-width: 700px) {
@@ -290,7 +286,6 @@ footer p{
     }
 
     .behind {
-        background-color: green;
         height: min(80vw, 700px);
     }
 }
